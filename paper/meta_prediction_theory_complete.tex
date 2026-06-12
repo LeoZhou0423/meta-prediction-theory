@@ -15,6 +15,7 @@
 \usepackage{setspace}
 \usepackage{caption}
 \usepackage{enumitem}
+\usepackage{multirow}
 \usepackage{url}
 \usepackage[colorlinks=true,linkcolor=blue,citecolor=blue,urlcolor=blue]{hyperref}
 
@@ -42,7 +43,7 @@
 \maketitle
 
 \begin{abstract}
-\noindent Self-report measures, despite their ubiquity in psychological research and clinical assessment, suffer from a fundamental vulnerability: respondents can deliberately manipulate their responses to produce desired outcomes. We introduce the Meta-Prediction Theory, a novel theoretical framework that reconceptualizes self-report bias as a recursive meta-cognitive process. Rather than passively distorting responses based on social desirability, respondents actively predict what scales measure, anticipate how their responses will be interpreted, and strategically adjust their answers accordingly---a process that operates across multiple levels of prediction. We extend the traditional Three-Layer Meta-Cognitive Model by incorporating scale cognition and meta-prediction as additional components, deriving 15 testable propositions concerning the nature, determinants, and consequences of meta-prediction bias. An exploratory empirical analysis using a large-scale dataset ($N = 24{,}292$) provides preliminary support for our theoretical predictions: response time patterns are correlated with scale scores ($r = -.132$), the Deliberation proxy (inverse extreme responding) is the strongest meta-cognitive predictor (sr$^2 = .164$), and response time variables account for a meaningful portion of shared variance between depression and anxiety measures. The No-SA hierarchical regression model demonstrates superior fit to the data compared to alternative models (AIC $= 94{,}096$ vs.\ $111{,}131$ and $132{,}614$; $\Delta R^2 = .208$ over the concurrent-validity baseline). However, these findings must be interpreted with caution: the proxy variables are imperfect measures of meta-cognitive processes, and the observed patterns may reflect clinical comorbidity, floor effects, or fatigue rather than meta-prediction. This work represents a proof of concept for response time-based detection of meta-cognitive processes in self-report assessment. All findings are exploratory and require replication with external validation.
+\noindent Self-report measures, despite their ubiquity in psychological research and clinical assessment, suffer from a fundamental vulnerability: respondents can deliberately manipulate their responses to produce desired outcomes. We introduce the Meta-Prediction Theory, a novel theoretical framework that reconceptualizes self-report bias as a recursive meta-cognitive process. Rather than passively distorting responses based on social desirability, respondents actively predict what scales measure, anticipate how their responses will be interpreted, and strategically adjust their answers accordingly---a process that operates across multiple levels of prediction. We extend the traditional Three-Layer Meta-Cognitive Model by incorporating scale cognition and meta-prediction as additional components, deriving 15 testable propositions concerning the nature, determinants, and consequences of meta-prediction bias. An exploratory empirical analysis using a large-scale dataset ($N = 24{,}292$) provides preliminary support for our theoretical predictions: response time patterns are correlated with scale scores ($r = -.132$), the Deliberation proxy (inverse extreme responding) is the strongest meta-cognitive predictor (sr$^2 = .164$), and response time variables account for a meaningful portion of shared variance between depression and anxiety measures. The No-SA hierarchical regression model demonstrates superior fit to the data compared to alternative models (AIC $= 94{,}096$ vs.\ $111{,}131$ and $132{,}614$; $\Delta R^2 = .208$ over the concurrent-validity baseline). However, these findings must be interpreted with caution: the proxy variables are imperfect measures of meta-cognitive processes, and the observed patterns may reflect clinical comorbidity, floor effects, or fatigue rather than meta-prediction. This work represents a proof of concept for response time-based detection of meta-cognitive processes in self-report assessment. A cross-scale generalizability analysis demonstrates that the RT-based proxies predict perceived stress scores beyond depression and anxiety ($\Delta R^2 = .010$), though effects are substantially smaller than the primary prediction ($\Delta R^2 = .208$). All findings are exploratory and require replication with external validation.
 
 \medskip
 \noindent\textbf{Keywords:} meta-prediction; social desirability bias; self-report bias; meta-cognition; psychological assessment; meta-cognitive processes; response time analysis
@@ -622,7 +623,49 @@ Several promising directions for future research emerge from this work. First, f
 
 \section{Conclusion}
 
-The Meta-Prediction Theory offers a proof of concept for understanding self-report bias as a recursive meta-cognitive process. By reconceptualizing bias as a dynamic, context-dependent process rather than a stable trait, the theory extends existing frameworks in important ways. The empirical analysis, conducted with a large dataset ($N = 24{,}292$), demonstrates that response time patterns---particularly DEL (inverse extreme responding) and GAD-7 scores---account for a substantial portion of variance in depression scores ($R^2 = .795$), outperforming the concurrent-validity baseline ($\Delta R^2 = .208$; $\Delta$AIC $= -17{,}035$). The cross-scale residualization reduces the PHQ-9/GAD-7 correlation by 43.2\%, suggesting that response time variables capture shared variance that is not explained by concurrent symptom measures alone. However, the current findings must be interpreted with caution: the proxy variables are imperfect measures of meta-cognitive processes, external validation against criterion measures (e.g., clinician ratings) is absent, and the observed patterns may reflect clinical comorbidity, floor effects, or fatigue rather than meta-prediction. This analysis is exploratory and all findings require replication. Future research should validate these findings using external criteria, develop direct measures of meta-cognitive processes, and test the computational models that the theory motivates.
+The Meta-Prediction Theory offers a proof of concept for understanding self-report bias as a recursive meta-cognitive process. By reconceptualizing bias as a dynamic, context-dependent process rather than a stable trait, the theory extends existing frameworks in important ways. The empirical analysis, conducted with a large dataset ($N = 24{,}292$), demonstrates that response time patterns---particularly DEL (inverse extreme responding) and GAD-7 scores---account for a substantial portion of variance in depression scores ($R^2 = .795$), outperforming the concurrent-validity baseline ($\Delta R^2 = .208$; $\Delta$AIC $= -17{,}035$). The cross-scale residualization reduces the PHQ-9/GAD-7 correlation by 43.2\%, suggesting that response time variables capture shared variance that is not explained by concurrent symptom measures alone. A cross-scale generalizability analysis demonstrates that the RT-based proxies predict PSS (stress) scores beyond PHQ-9+GAD-7 ($\Delta R^2 = .010$; $\Delta$AIC $= -295$), though the effect is substantially smaller than the primary PHQ-9 prediction ($\Delta R^2 = .208$). However, the current findings must be interpreted with caution: the proxy variables are imperfect measures of meta-cognitive processes, external validation against criterion measures (e.g., clinician ratings) is absent, and the observed patterns may reflect clinical comorbidity, floor effects, or fatigue rather than meta-prediction. This analysis is exploratory and all findings require replication. Future research should validate these findings using external criteria, develop direct measures of meta-cognitive processes, and test the computational models that the theory motivates.
+
+% =============================================================================
+% SUPPLEMENTARY MATERIALS
+% =============================================================================
+
+\section*{Supplementary Materials}
+
+\subsection*{S1. Cross-Scale Generalizability Analysis}
+
+A key concern with the primary analysis is whether the RT-based meta-cognitive proxies capture effects that are specific to the PHQ-9/GAD-7 relationship, or whether they generalize to predicting other psychological constructs. To address this, we used the same proxy variables (DEL, MM, RA) computed from PHQ-9/GAD-7 response times to predict scores on two additional scales in the dataset: the Insomnia Severity Index (ISI; 7 items, measuring sleep disturbance) and the Perceived Stress Scale (PSS; 7 items, measuring perceived stress).
+
+If RT patterns generalize to predicting ISI and PSS scores above and beyond PHQ-9+GAD-7 alone, this would demonstrate that the proxy effects are not specific to the depression-anxiety relationship. Conversely, if the proxies only predict PHQ-9 scores but not ISI or PSS, this would suggest the effects may be specific to the concurrent-validity context.
+
+\begin{table}[h]
+\centering
+\caption{Cross-Scale Prediction Results}
+\label{tab:cross_scale}
+\footnotesize
+\begin{tabular}{@{}lccccc@{}}
+\toprule
+\textbf{Target} & \textbf{Model} & \textbf{R$^2$} & \textbf{AIC} & \textbf{dR$^2$} & \textbf{CV-R$^2$} \\
+\midrule
+\multirow{2}{*}{\textbf{PHQ-9}} 
+  & Baseline (GAD-7) & .587 & 111,131 & --- & --- \\
+  & Full No-SA & .795 & 94,096 & \textbf{.208} & .794 \\
+\midrule
+\multirow{2}{*}{\textbf{PSS}} 
+  & Baseline (PHQ-9+GAD-7) & .186 & 75,853 & --- & .178 \\
+  & Full No-SA & .196 & 75,558 & \textbf{.010} & .187 \\
+\midrule
+\multirow{2}{*}{\textbf{ISI}} 
+  & Baseline (PHQ-9+GAD-7) & .446 & 45,639 & --- & .441 \\
+  & Full No-SA & .447 & 45,622 & .001 & .441 \\
+\bottomrule
+\end{tabular}
+\smallskip
+\footnotesize \textit{Note.} Full No-SA model includes PHQ-9, GAD-7, DEL, MM, RA as predictors. dR$^2$ = change in R$^2$ from baseline. CV-R$^2$ = mean 5-fold cross-validated R$^2$. All models estimated via OLS ($N = 24{,}292$).
+\end{table}
+
+The results (Table~\ref{tab:cross_scale}) show a graded pattern of generalizability. The primary PHQ-9 prediction shows strong effects ($\Delta R^2 = .208$; $\Delta$AIC $= -17{,}035$). The PSS prediction shows a small but meaningful improvement ($\Delta R^2 = .010$; $\Delta$AIC $= -295$; 5-fold CV: $\Delta$CV-R$^2$ $= .009$), driven primarily by the MM (RT variability) proxy (sr$^2$ $= .0098$). The ISI prediction shows negligible improvement ($\Delta R^2 = .0005$; $\Delta$AIC $= -16$).
+
+This graded pattern is interpretable: depression, anxiety, and stress share substantial cognitive-emotional overlap \citep{Clark1991}, so RT patterns associated with depression/anxiety responding partially generalize to stress. Insomnia, by contrast, is more physiological in nature and less directly related to the meta-cognitive processes captured by our proxies. The fact that the proxies generalize selectively---to PSS but not ISI---provides evidence that the effects are not simply noise, but also not universal. This specificity pattern is more informative than either perfect generalizability or complete failure to generalize.
 
 % =============================================================================
 % REFERENCES
