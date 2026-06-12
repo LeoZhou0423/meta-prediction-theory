@@ -1,0 +1,33 @@
+# Data (available from Zenodo: https://zenodo.org/records/10423537)
+data/
+
+# Python cache
+__pycache__/
+*.pyc
+
+# LaTeX auxiliary files
+*.aux
+*.log
+*.bbl
+*.blg
+*.out
+*.toc
+*.lof
+*.lot
+*.fls
+*.fdb_latexmk
+*.synctex.gz
+
+# Generated PDF (will be built separately)
+paper/*.pdf
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Output files
+analysis/output/
