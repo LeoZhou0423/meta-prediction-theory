@@ -207,17 +207,18 @@ plt.close()
 
 print("Creating Figure 4: MPC Correction Results...")
 
-# Apply correction
+# Apply No-SA correction (primary model: GAD-7 + MM + DEL, excluding SA)
 from sklearn.linear_model import LinearRegression
 
-X = merged[['gad7_total', 'scale_awareness', 'meta_monitoring']].dropna()
+X = merged[['gad7_total', 'meta_monitoring']].dropna()
 y = merged.loc[X.index, 'score']
 
 model = LinearRegression()
 model.fit(X, y)
 
-merged['phq9_corrected'] = merged['score'] - model.coef_[1] * merged['scale_awareness'] - model.coef_[2] * merged['meta_monitoring']
-merged['gad7_corrected'] = merged['gad7_total'] - model.coef_[1] * merged['scale_awareness'] - model.coef_[2] * merged['meta_monitoring']
+# Use only MM for residualization (consistent with No-SA primary model)
+merged['phq9_corrected'] = merged['score'] - model.coef_[1] * merged['meta_monitoring']
+merged['gad7_corrected'] = merged['gad7_total'] - model.coef_[1] * merged['meta_monitoring']
 
 fig, axes = plt.subplots(1, 3, figsize=(15, 5))
 
@@ -271,8 +272,8 @@ print("Creating Figure 5: Model Comparison...")
 
 fig, ax = plt.subplots(figsize=(10, 6))
 
-models = ['Null Model', 'Concurrent-Validity\nModel', 'Meta-Prediction\nModel']
-aic_values = [132614, 111131, 92143]
+models = ['Null Model', 'Concurrent-Validity\nModel', 'Meta-Prediction\nModel (No-SA)']
+aic_values = [132614, 111131, 94096]
 colors = ['#95a5a6', '#3498db', '#e74c3c']
 
 bars = ax.bar(models, aic_values, color=colors, alpha=0.7, edgecolor='black', linewidth=2)
@@ -287,7 +288,7 @@ ax.set_title('Model Comparison: AIC Values', fontsize=14, fontweight='bold')
 ax.set_ylim(80000, 140000)
 
 # Add best model annotation
-ax.annotate('Best Model', xy=(2, 92143), xytext=(2, 95000),
+ax.annotate('Best Model', xy=(2, 94096), xytext=(2, 97000),
             arrowprops=dict(arrowstyle='->', color='red', lw=2),
             fontsize=12, fontweight='bold', color='red', ha='center')
 

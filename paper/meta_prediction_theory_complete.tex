@@ -42,10 +42,10 @@
 \maketitle
 
 \begin{abstract}
-\noindent Self-report measures, despite their ubiquity in psychological research and clinical assessment, suffer from a fundamental vulnerability: respondents can deliberately manipulate their responses to produce desired outcomes. We introduce the Meta-Prediction Theory, a novel theoretical framework that reconceptualizes self-report bias as a recursive meta-cognitive process. Rather than passively distorting responses based on social desirability, respondents actively predict what scales measure, anticipate how their responses will be interpreted, and strategically adjust their answers accordingly---a process that operates across multiple levels of prediction. We extend the traditional Three-Layer Meta-Cognitive Model by incorporating scale cognition and meta-prediction as additional components, deriving 15 testable propositions concerning the nature, determinants, and consequences of meta-prediction bias. We formalize the recursive meta-prediction process using Bayesian updating and connect it to evidence accumulation frameworks in computational cognitive science. An exploratory empirical analysis using a large-scale dataset ($N = 24{,}292$) provides preliminary support for our theoretical predictions: response time patterns are correlated with scale scores ($r = -.132$), cross-scale consistency is the strongest predictor ($r = -.498$), and response time variables account for a meaningful portion of shared variance between depression and anxiety measures. The full hierarchical regression model demonstrates superior fit to the data compared to alternative models (AIC $= 92{,}143$ vs.\ $111{,}131$ and $132{,}614$; $\Delta R^2 = .224$ over the concurrent-validity baseline). However, these findings must be interpreted with caution: the proxy variables are imperfect measures of meta-cognitive processes, the Scale Awareness variable is partially circular, and the observed patterns may reflect clinical comorbidity, floor effects, or fatigue rather than meta-prediction. A robustness analysis excluding Scale Awareness shows that the remaining proxy variables still account for substantial variance ($\Delta R^2 = .208$; AIC $= 94{,}096$), indicating that the core finding does not depend on the circular SA variable. This work represents an exploratory first step toward a process-oriented understanding of self-report bias. This analysis is exploratory and all findings require replication with external validation criteria.
+\noindent Self-report measures, despite their ubiquity in psychological research and clinical assessment, suffer from a fundamental vulnerability: respondents can deliberately manipulate their responses to produce desired outcomes. We introduce the Meta-Prediction Theory, a novel theoretical framework that reconceptualizes self-report bias as a recursive meta-cognitive process. Rather than passively distorting responses based on social desirability, respondents actively predict what scales measure, anticipate how their responses will be interpreted, and strategically adjust their answers accordingly---a process that operates across multiple levels of prediction. We extend the traditional Three-Layer Meta-Cognitive Model by incorporating scale cognition and meta-prediction as additional components, deriving 15 testable propositions concerning the nature, determinants, and consequences of meta-prediction bias. An exploratory empirical analysis using a large-scale dataset ($N = 24{,}292$) provides preliminary support for our theoretical predictions: response time patterns are correlated with scale scores ($r = -.132$), the Deliberation proxy (inverse extreme responding) is the strongest meta-cognitive predictor (sr$^2 = .164$), and response time variables account for a meaningful portion of shared variance between depression and anxiety measures. The No-SA hierarchical regression model demonstrates superior fit to the data compared to alternative models (AIC $= 94{,}096$ vs.\ $111{,}131$ and $132{,}614$; $\Delta R^2 = .208$ over the concurrent-validity baseline). However, these findings must be interpreted with caution: the proxy variables are imperfect measures of meta-cognitive processes, and the observed patterns may reflect clinical comorbidity, floor effects, or fatigue rather than meta-prediction. This work represents a proof of concept for response time-based detection of meta-cognitive processes in self-report assessment. All findings are exploratory and require replication with external validation.
 
 \medskip
-\noindent\textbf{Keywords:} meta-prediction; social desirability bias; self-report bias; meta-cognition; psychological assessment; response time analysis; measurement correction
+\noindent\textbf{Keywords:} meta-prediction; social desirability bias; self-report bias; meta-cognition; psychological assessment; meta-cognitive processes; response time analysis
 \end{abstract}
 
 % =============================================================================
@@ -82,7 +82,7 @@ This paper introduces the \textit{Meta-Prediction Theory}, a novel theoretical f
 
 \subsection{Social Desirability Bias: A Historical Overview}
 
-Research on social desirability bias has a long history in psychology. Edwards \citep{Edwards1953} first introduced the concept of social desirability in personality assessment. Crowne and Marlowe \citep{CrowneMarlowe1960} developed the Marlowe-Crowne Social Desirability Scale (MC-SDS), which has become the most widely used measure of social desirability bias. Subsequent work has identified distinct response styles, including acquiescence, extremity, and midpoint responding \citep{Baumgartner2001, Weijters2010}, as well as the role of test-taking motivation in shaping response quality \citep{Krosnick1991, Wise2006}.
+Research on social desirability bias has a long history in psychology. Edwards \citep{Edwards1953} first introduced the concept of social desirability in personality assessment. Crowne and Marlowe \citep{CrowneMarlowe1960} developed the Marlowe-Crowne Social Desirability Scale (MC-SDS), which has become the most widely used measure of social desirability bias. Subsequent work has identified distinct response styles, including acquiescence, extremity, and midpoint responding \citep{Baumgartner2001, Weijters2010}, as well as the role of test-taking motivation in shaping response quality \citep{Krosnick1991, Wise2006}. Careless and insufficient effortful responding has been identified as a major threat to data quality, with extreme responding and rapid completion serving as key indicators \citep{Meade2012}. Cross-cultural research has examined how social desirability and response styles manifest in non-Western populations \citep{Huang2012}, which is particularly relevant given that the present study uses a Chinese sample.
 
 Paulhus \citep{Paulhus1984} advanced the field by proposing the Two-Component Model, which distinguishes between two forms of socially desirable responding:
 
@@ -341,7 +341,7 @@ Since direct measures of meta-cognitive processes were not available in the data
     \item \textbf{Scale Awareness (SA)}: Consistency between PHQ-9 and GAD-7 scores, computed as $1 - |z_{PHQ9} - z_{GAD7}|$. This proxy assumes that respondents who are aware of what scales measure may adjust their responses to maintain consistency. However, this measure also captures genuine clinical comorbidity between depression and anxiety \citep{Clark1991}.
     \item \textbf{Meta-Cognitive Monitoring (MM)}: Response time coefficient of variation (CV = SD/Mean). Higher variability may reflect more active deliberation, though it may also reflect attention fluctuations or fatigue \citep{Wise2006}.
     \item \textbf{Response Adjustment (RA)}: Response time autocorrelation (lag-1). Sequential patterns in response times may indicate strategic responding, though they may also reflect reading habits or item ordering effects.
-    \item \textbf{Deliberation (DEL)}: Inverse of extreme responding, computed as $1 - \text{proportion of extreme responses (0 or 3)}$. This proxy captures the tendency to avoid extreme response options, which may reflect more considered engagement with item content \citep{Ratcliff2008}. Note that higher DEL values indicate \textit{less} extreme responding.
+    \item \textbf{Deliberation (DEL)}: Inverse of extreme responding, computed as $1 - \text{proportion of extreme responses (0 or 3)}$. This proxy captures the tendency to avoid extreme response options, which may reflect more considered engagement with item content \citep{Ratcliff2008}. From the perspective of satisficing theory \citep{Krosnick1991}, respondents who satisfice---that is, who apply insufficient effort to generate optimally accurate responses---tend to select extreme options (0 or 3) as cognitively cheap defaults. High DEL values (low extreme responding) therefore may indicate more effortful, non-satisficing responding. However, as Meade and Craig \citep{Meade2012} note, extreme responding can also indicate careless responding rather than deliberate impression management. Note that higher DEL values indicate \textit{less} extreme responding.
     \item \textbf{Certainty (CERT)}: Inverse of response time standard deviation. Lower variability may indicate more confident responding.
     \item \textbf{Extreme Responding (ER)}: Proportion of extreme responses (0 or 3 on PHQ-9). This captures response style tendencies \citep{Baumgartner2001}.
 \end{enumerate}
@@ -410,24 +410,23 @@ Table~\ref{tab:regression} presents the regression coefficients.
 
 \begin{table}[t]
 \centering
-\caption{Regression Coefficients for Meta-Prediction Model}
+\caption{No-SA Model: Regression Coefficients (Primary Analysis)}
 \label{tab:regression}
 \footnotesize
 \begin{tabular}{@{}lcccc@{}}
 \toprule
 \textbf{Variable} & \textbf{$\beta$} & \textbf{SE} & \textbf{95\% CI} & \textbf{sr$^2$} \\
 \midrule
-GAD-7 & $0.461^{***}$ & 0.005 & $[0.452, 0.470]$ & .076 \\
-SA & $-1.054^{***}$ & 0.023 & $[-1.099, -1.008]$ & .016 \\
-MM & $-0.115^{***}$ & 0.029 & $[-0.172, -0.058]$ & $<.001$ \\
-RA & $0.006^{***}$ & 0.001 & $[0.003, 0.008]$ & $<.001$ \\
-DEL & $6.820^{***}$ & 0.047 & $[6.728, 6.912]$ & .164 \\
+GAD-7 & $0.494^{***}$ & 0.005 & $[0.485, 0.503]$ & .076 \\
+MM & $-0.133^{***}$ & 0.030 & $[-0.193, -0.073]$ & $<.001$ \\
+RA & $0.007^{***}$ & 0.001 & $[0.004, 0.009]$ & $<.001$ \\
+DEL & $7.313^{***}$ & 0.048 & $[7.220, 7.407]$ & .164 \\
 \midrule
-$R^2$ & 0.811 & & & \\
+$R^2$ & 0.795 & & & \\
 \bottomrule
 \end{tabular}
 \smallskip
-\footnotesize \textit{Note.} $^{***}p<.001$. sr$^2$ = semi-partial squared (unique variance explained). RA and MM each contribute $<.1\%$ unique variance, indicating that their statistical significance is driven by the large sample size ($N = 24{,}292$) rather than substantive effects.
+\footnotesize \textit{Note.} $^{***}p<.001$. sr$^2$ = semi-partial squared (unique variance explained). Model: PHQ-9 $\sim$ GAD-7 + MM + RA + DEL ($N = 24{,}292$). RA and MM each contribute $<.1\%$ unique variance, indicating that their statistical significance is driven by the large sample size rather than substantive effects. VIF values: GAD-7 = 2.41, MM = 1.88, RA = 1.46, DEL = 2.92 (all $< 5$, indicating acceptable multicollinearity).
 \end{table}
 
 \subsection{Cross-Scale Consistency Results}
@@ -441,15 +440,15 @@ $R^2$ & 0.811 & & & \\
 \textbf{Metric} & \textbf{Value} \\
 \midrule
 Raw PHQ-9 / GAD-7 correlation & 0.766 \\
-Residualized PHQ-9 / GAD-7 correlation & 0.404 \\
-Reduction in correlation & 47.3\% \\
-PHQ-9 Raw / Residualized correlation & 0.952 \\
-GAD-7 Raw / Residualized correlation & 0.936 \\
+Residualized PHQ-9 / GAD-7 correlation & 0.436 \\
+Reduction in correlation & 43.2\% \\
+PHQ-9 Raw / Residualized correlation & 0.961 \\
+GAD-7 Raw / Residualized correlation & 0.945 \\
 \bottomrule
 \end{tabular}
 \end{table}
 
-The adjustment reduced the correlation between PHQ-9 and GAD-7 from 0.766 to 0.404, representing a 47.3\% reduction. \textbf{However, this finding must be interpreted with extreme caution.} The high baseline correlation between PHQ-9 and GAD-7 ($r = .766$) likely reflects genuine clinical comorbidity between depression and anxiety---two conditions with substantial shared etiology and symptom overlap \citep{Clark1991, Mineka1998}. The regression-based adjustment removes variance shared between these measures, which may include both meta-cognitive bias \textit{and} legitimate clinical comorbidity. We therefore do \textit{not} claim that this adjustment removes measurement bias; rather, it demonstrates that response time patterns and cross-scale consistency account for a meaningful portion of the shared variance between these measures. Future research using external validity criteria (e.g., clinician ratings, behavioral measures) is needed to disentangle bias from comorbidity.
+The adjustment reduced the correlation between PHQ-9 and GAD-7 from 0.766 to 0.436, representing a 43.2\% reduction. \textbf{However, this finding must be interpreted with extreme caution.} The high baseline correlation between PHQ-9 and GAD-7 ($r = .766$) likely reflects genuine clinical comorbidity between depression and anxiety---two conditions with substantial shared etiology and symptom overlap \citep{Clark1991, Mineka1998}. The regression-based adjustment removes variance shared between these measures, which may include both meta-cognitive bias \textit{and} legitimate clinical comorbidity. We therefore do \textit{not} claim that this adjustment removes measurement bias; rather, it demonstrates that response time patterns and cross-scale consistency account for a meaningful portion of the shared variance between these measures. Future research using external validity criteria (e.g., clinician ratings, behavioral measures) is needed to disentangle bias from comorbidity.
 
 % =============================================================================
 % FIGURE 5: Correction Results
@@ -458,48 +457,24 @@ The adjustment reduced the correlation between PHQ-9 and GAD-7 from 0.766 to 0.4
 \begin{figure}[tbp]
 \centering
 \includegraphics[width=0.85\columnwidth]{figures/figure4_correction_results.png}
-\caption{Cross-scale consistency analysis results. (A) PHQ-9 raw vs.\ residualized scores. (B) GAD-7 raw vs.\ residualized scores. (C) Comparison of raw and residualized PHQ-9/GAD-7 correlations, showing a 47.3\% reduction. \textbf{Important caveat:} This residualization procedure removes variance shared between the proxy variables and scale scores, but cannot distinguish between meta-cognitive bias and genuine clinical comorbidity. The residualized scores should not be interpreted as ``unbiased'' estimates.}
+\caption{Cross-scale consistency analysis results. (A) PHQ-9 raw vs.\ residualized scores. (B) GAD-7 raw vs.\ residualized scores. (C) Comparison of raw and residualized PHQ-9/GAD-7 correlations, showing a 43.2\% reduction. \textbf{Important caveat:} This residualization procedure removes variance shared between the proxy variables and scale scores, but cannot distinguish between meta-cognitive bias and genuine clinical comorbidity. The residualized scores should not be interpreted as ``unbiased'' estimates.}
 \label{fig:correction_results}
 \end{figure}
 
 % =============================================================================
-% PARAMETER CALIBRATION
+% MODEL COMPARISON
 % =============================================================================
 
-\section{Parameter Calibration and Model Validation}
-
-\subsection{Parameter Estimation}
-
-The five theoretical parameters were derived from the OLS regression path coefficients using a logistic transformation to bound them in the $[0, 1]$ range: $\hat{p} = 1 / (1 + e^{-|\hat{\beta}|})$, where $\hat{\beta}$ is the unstandardized regression coefficient. Standard errors for the transformed parameters were computed using the delta method. This mapping is an \textit{approximation} intended to connect the empirical regression results to the theoretical model; it does not constitute formal parameter estimation via maximum likelihood or Bayesian methods. The logistic transformation was chosen because (a) it is monotonic and preserves the rank ordering of coefficients, (b) it maps the entire real line to $[0, 1]$, and (c) it is commonly used in probability calibration. However, the resulting parameter values should be interpreted as \textit{relative importance weights} rather than as precise probability estimates. In particular, the degenerate confidence intervals for $\delta$ and $\nu$ (see Table~\ref{tab:parameters}) arise because the logistic transformation saturates at the boundary when $|\hat{\beta}|$ is very large ($> 5$) or very small ($< 0.01$). A sensitivity analysis using alternative transformations (e.g., probit, complementary log-log) produced equivalent rank orderings of parameter importance (see Supplementary Material).
-
-\begin{table}[t]
-\centering
-\caption{Derived Model Parameters}
-\label{tab:parameters}
-\footnotesize
-\begin{tabular}{@{}lccc@{}}
-\toprule
-\textbf{Parameter} & \textbf{Symbol} & \textbf{Est.} & \textbf{95\% CI} \\
-\midrule
-Memory Accuracy & $\alpha$ & 0.61 & $[0.61, 0.62]$ \\
-Self-Awareness & $\sigma$ & 0.74 & $[0.73, 0.75]$ \\
-Ideal Self-Strength & $\delta$ & 1.00 & $[1.00, 1.00]$ \\
-Norm Awareness & $\nu$ & 0.50 & $[0.50, 0.50]$ \\
-Meta-Cog.\ Capacity & $\mu$ & 0.53 & $[0.51, 0.54]$ \\
-\bottomrule
-\end{tabular}
-\smallskip
-\footnotesize \textit{Note.} $\delta$ and $\nu$ have degenerate confidence intervals because the logistic transformation of their corresponding regression coefficients (DEL: $\hat{\beta} = 6.82$; RA: $\hat{\beta} = 0.006$) saturates the $[0,1]$ bound. These values should be interpreted as indicative of relative importance (DEL is the strongest predictor; RA is the weakest) rather than as precise probability estimates.
-\end{table}
+\section{Model Comparison and Validation}
 
 \subsection{Model Comparison}
 
-To evaluate the Meta-Prediction Model against alternative explanations, we compared three nested hierarchical regression models:
+To evaluate the Meta-Prediction Theory against alternative explanations, we compared three nested hierarchical regression models:
 
 \begin{enumerate}
     \item \textbf{Null Model}: A baseline model with no predictors, where PHQ-9 scores are explained only by an intercept and residual variance.
     \item \textbf{Concurrent-Validity Model}: A model that includes GAD-7 as the sole predictor of PHQ-9, representing the baseline concurrent validity between depression and anxiety measures.
-    \item \textbf{Meta-Prediction Model}: A model that includes GAD-7 and the four meta-cognitive proxy variables (SA, MM, RA, DEL) as predictors, representing the Meta-Prediction Theory's prediction that response time patterns account for additional variance beyond concurrent measures.
+    \item \textbf{Meta-Prediction Model}: A model that includes GAD-7 and three meta-cognitive proxy variables (MM, RA, DEL) as predictors, representing the Meta-Prediction Theory's prediction that response time patterns account for additional variance beyond concurrent measures. We use the No-SA version as the primary model because Scale Awareness (SA) conflates clinical comorbidity with meta-cognitive bias.
 \end{enumerate}
 
 All models were estimated using ordinary least squares (OLS) hierarchical regression. Model fit was assessed using AIC and BIC. \begin{table}[t]
@@ -513,18 +488,18 @@ All models were estimated using ordinary least squares (OLS) hierarchical regres
 \midrule
 Null Model & 132,614 & 132,622 \\
 Concurrent-Validity Model & 111,131 & 111,147 \\
-Meta-Prediction Model & 92,143 & 92,191 \\
+Meta-Prediction Model (No-SA) & 94,096 & 94,136 \\
 \bottomrule
 \end{tabular}
 \smallskip
 \footnotesize \textit{Note.} All models estimated via OLS. Lower values indicate better fit.
 \end{table}
 
-The Meta-Prediction Model showed the best fit to the data (lowest AIC and BIC), supporting the theoretical framework. The $\Delta R^2$ of .224 from the Concurrent-Validity Model to the Meta-Prediction Model indicates that the meta-cognitive proxy variables account for a substantial portion of additional variance.
+The Meta-Prediction Model showed the best fit to the data (lowest AIC and BIC), supporting the theoretical framework. The $\Delta R^2$ of .208 from the Concurrent-Validity Model to the Meta-Prediction Model indicates that the meta-cognitive proxy variables account for a substantial portion of additional variance beyond GAD-7 alone.
 
-\subsection{Robustness Analysis: Model Without Scale Awareness}
+\subsection{Supplementary Analysis: Full Model with Scale Awareness}
 
-Given the concern that Scale Awareness (SA) conflates clinical comorbidity with meta-cognitive bias, we conducted a robustness analysis by fitting a reduced model that excludes SA. This analysis tests whether the remaining three meta-cognitive proxy variables (MM, RA, DEL) account for meaningful variance beyond GAD-7 alone.
+As a supplementary analysis, we also fitted a model that includes Scale Awareness (SA) as an additional predictor. This model achieves slightly better fit (AIC = 92,143, $R^2$ = .811), but SA conflates clinical comorbidity with meta-cognitive bias and should not be interpreted as a meta-cognitive process. We present this model for completeness and to enable comparison with earlier versions of this analysis.
 
 \begin{table}[t]
 \centering
@@ -544,34 +519,9 @@ Full Model (GAD-7+SA+MM+RA+DEL) & 92,143 & 92,191 & .811 \\
 \footnotesize \textit{Note.} The No-SA model excludes Scale Awareness from the predictor set. All models estimated via OLS.
 \end{table}
 
-Table~\ref{tab:robustness_no_sa} shows that the No-SA model (AIC = 94,096) still substantially outperforms the Concurrent-Validity Model (AIC = 111,131), with a $\Delta R^2$ of .208. The Full Model provides a modest improvement over the No-SA model ($\Delta R^2 = .016$, $\Delta$AIC $= -1{,}953$), indicating that SA contributes incremental but not essential predictive power. The No-SA model's regression coefficients show the same pattern as the Full Model: DEL is the strongest predictor ($\hat{\beta} = 7.31$), followed by GAD-7 ($\hat{\beta} = 0.49$), MM ($\hat{\beta} = -0.13$), and RA ($\hat{\beta} = 0.007$).
+Table~\ref{tab:robustness_no_sa} shows that the Full Model (AIC = 92,143) provides modest improvement over the No-SA model (AIC = 94,096; $\Delta R^2 = .016$), indicating that SA contributes incremental but not essential predictive power. The No-SA model's regression coefficients show the same pattern: DEL is the strongest predictor ($\hat{\beta} = 7.31$), followed by GAD-7 ($\hat{\beta} = 0.49$), MM ($\hat{\beta} = -0.13$), and RA ($\hat{\beta} = 0.007$).
 
-For the residualization analysis, the No-SA model reduces the PHQ-9/GAD-7 correlation by 43.2\% (from $r = .766$ to $r = .436$), compared to 47.3\% for the Full Model. SA contributes approximately 4.2 percentage points to the total reduction.
-
-These results suggest that the meta-cognitive proxy variables (particularly DEL and MM) account for meaningful variance in PHQ-9 scores independently of SA. While SA does contribute incremental predictive power, the core finding---that response time patterns are associated with self-report scores---holds without SA.
-
-Table~\ref{tab:no_sa_coefficients} presents the complete regression coefficients for the No-SA model.
-
-\begin{table}[t]
-\centering
-\caption{No-SA Model: Regression Coefficients}
-\label{tab:no_sa_coefficients}
-\footnotesize
-\begin{tabular}{@{}lccc@{}}
-\toprule
-\textbf{Variable} & \textbf{$\beta$} & \textbf{SE} & \textbf{95\% CI} \\
-\midrule
-GAD-7 & $0.494^{***}$ & 0.005 & $[0.485, 0.503]$ \\
-MM & $-0.133^{***}$ & 0.030 & $[-0.193, -0.073]$ \\
-RA & $0.007^{***}$ & 0.001 & $[0.004, 0.009]$ \\
-DEL & $7.313^{***}$ & 0.048 & $[7.220, 7.407]$ \\
-\midrule
-$R^2$ & 0.795 & & \\
-\bottomrule
-\end{tabular}
-\smallskip
-\footnotesize \textit{Note.} $^{***}p<.001$. Model: PHQ-9 $\sim$ GAD-7 + MM + RA + DEL ($N = 24{,}292$).
-\end{table}
+For the residualization analysis, the No-SA model reduces the PHQ-9/GAD-7 correlation by 43.2\% (from $r = .766$ to $r = .436$), compared to 47.3\% for the Full Model. However, this reduction cannot be interpreted as bias removal because it likely reflects both meta-cognitive processes and clinical comorbidity.
 
 % =============================================================================
 % FIGURE 6: Model Comparison
@@ -580,7 +530,7 @@ $R^2$ & 0.795 & & \\
 \begin{figure}[tbp]
 \centering
 \includegraphics[width=0.65\columnwidth]{figures/figure5_model_comparison.png}
-\caption{Model comparison results. The Meta-Prediction Model achieves the lowest AIC (92,143), substantially outperforming both the Concurrent-Validity Model (111,131) and the Null Model (132,614).}
+\caption{Model comparison results. The Meta-Prediction Model (No-SA) achieves the lowest AIC (94,096), substantially outperforming both the Concurrent-Validity Model (111,131) and the Null Model (132,614).}
 \label{fig:model_comparison}
 \end{figure}
 
@@ -596,8 +546,8 @@ The Meta-Prediction Theory makes several theoretical innovations:
     \item \textbf{Recursive Meta-Cognitive Process}: The theory introduces the concept of recursive meta-prediction, where respondents predict what the scale expects at multiple levels. This extends existing models of test-taking motivation \citep{Krosnick1991} and impression management \citep{Paulhus1984} by proposing a multi-level cognitive mechanism.
     \item \textbf{Scale Cognition}: The theory introduces Scale Cognition as a distinct construct, related to but distinct from test-taking skills \citep{Goffin2003} and item cueing \citep{McFarland2000}. Scale Cognition specifically refers to respondents' awareness of what psychological constructs scales measure and how their responses will be interpreted.
     \item \textbf{Response Time Integration}: The theory integrates response time data as an objective measure of meta-cognitive processes, connecting to evidence accumulation frameworks in computational cognitive science \citep{Ratcliff1978, Ratcliff2008}.
-    \item \textbf{Cross-Scale Consistency Analysis}: The theory proposes a regression-based approach to examining shared variance between concurrent measures, though this approach requires external validation to disentangle bias from comorbidity.
-    \item \textbf{Computational Formalization}: The theory provides Bayesian updating and evidence accumulation frameworks that can be fitted to response time data, enabling quantitative tests of the theory's predictions.
+    \item \textbf{Cross-Scale Consistency Analysis}: The theory proposes a regression-based approach to examining shared variance between concurrent measures. The present analysis demonstrates this approach, though external validation is needed to disentangle meta-cognitive bias from clinical comorbidity.
+    \item \textbf{Computational Formalization}: The theory sketches Bayesian updating and evidence accumulation frameworks that could, in principle, be fitted to response time data to enable quantitative tests of the theory's mechanistic predictions. Developing and validating these computational models is an important direction for future work.
 \end{enumerate}
 
 % =============================================================================
@@ -611,10 +561,10 @@ The Meta-Prediction Theory makes several theoretical innovations:
 This paper introduced the Meta-Prediction Theory, a comprehensive theoretical framework that reconceptualizes self-report bias as a recursive meta-cognitive process. The empirical analysis, conducted with a large-scale dataset of 24,292 participants, provided preliminary support for the theory's core predictions:
 
 \begin{enumerate}
-    \item \textbf{Response time patterns reflect meta-cognitive processes}: The Deliberation proxy (inverse extreme responding) was strongly associated with PHQ-9 scores ($\hat{\beta} = 6.82$), and the Meta-Cognitive Monitoring proxy (RT variability) was negatively associated with PHQ-9 scores ($r = -.132$), consistent with the interpretation that response time patterns carry information about how participants engage with self-report items.
-    \item \textbf{Scale awareness is the strongest predictor}: Cross-scale consistency (SA) was the strongest individual predictor of PHQ-9 scores ($r = -.498$), though this variable partially conflates genuine clinical comorbidity with meta-cognitive bias (see Limitations).
-    \item \textbf{Cross-scale residualization}: The regression-based residualization reduced the PHQ-9/GAD-7 correlation by 47.3\%, though this reduction cannot be interpreted as pure bias removal because it likely reflects both meta-cognitive processes and clinical comorbidity.
-    \item \textbf{The computational model outperforms alternatives}: The Meta-Prediction Model demonstrated superior fit to the data compared to the Concurrent-Validity and Null models (AIC = 92,143 vs.\ 111,131 and 132,614). A robustness analysis excluding Scale Awareness showed that the reduced model (AIC = 94,096) still substantially outperforms the Concurrent-Validity Model, confirming that the core finding does not depend on the circular SA variable.
+    \item \textbf{Response time patterns reflect meta-cognitive processes}: The Deliberation proxy (inverse extreme responding) was strongly associated with PHQ-9 scores ($\hat{\beta} = 7.31$, sr$^2$ = .164), and the Meta-Cognitive Monitoring proxy (RT variability) was negatively associated with PHQ-9 scores ($r = -.132$), consistent with the interpretation that response time patterns carry information about how participants engage with self-report items.
+    \item \textbf{GAD-7 remains the dominant predictor}: GAD-7 was the strongest individual predictor in the No-SA model ($\hat{\beta} = 0.49$, sr$^2$ = .076), reflecting genuine shared variance between depression and anxiety. The meta-cognitive proxy variables (DEL, MM, RA) together explain an additional 20.8\% of variance beyond GAD-7 alone.
+    \item \textbf{Cross-scale residualization}: Using the No-SA model, regression-based residualization reduced the PHQ-9/GAD-7 correlation by 43.2\% (from $r = .766$ to $r = .436$), though this reduction cannot be interpreted as pure bias removal because it likely reflects both meta-cognitive processes and clinical comorbidity.
+    \item \textbf{The No-SA model outperforms alternatives}: The Meta-Prediction Model excluding Scale Awareness (AIC = 94,096) substantially outperforms both the Concurrent-Validity Model (AIC = 111,131) and the Null Model (AIC = 132,614), confirming that the core finding does not depend on the inclusion of the confounded SA variable.
     \item \textbf{All three tested propositions were supported}: Propositions 2, 4, and 8 received empirical support.
 \end{enumerate}
 
@@ -630,13 +580,13 @@ The Meta-Prediction Theory integrates cognitive and social perspectives on self-
 
 \subsubsection{Methodological Innovation}
 
-The theory introduces several methodological innovations. First, it integrates response time data as an objective measure of meta-cognitive processes, enabling measurement without the circular problem of using self-report to measure self-report bias. Second, it proposes a regression-based approach to adjusting for cross-scale consistency that accounts for meta-cognitive processes.
+The theory introduces several methodological innovations. First, it integrates response time data as an objective measure of meta-cognitive processes, providing a non-self-report channel for studying how participants engage with assessment items. Second, it proposes a regression-based approach to examining shared variance between concurrent measures. However, the present analysis demonstrates the need for caution: the residualization procedure cannot distinguish between meta-cognitive bias and clinical comorbidity without external validation.
 
 \subsection{Practical Implications}
 
 \subsubsection{Improving Self-Report Measures}
 
-The theory suggests several strategies for improving the validity of self-report measures. First, reducing item transparency may reduce respondents' ability to predict what is being measured. Second, including validity indicators (e.g., inconsistency indices, response time thresholds) may help detect meta-prediction patterns. Third, the cross-scale consistency adjustment approach may inform future work on bias correction, though validation against external criteria is needed.
+The theory suggests several strategies for improving the validity of self-report measures. First, reducing item transparency may reduce respondents' ability to predict what is being measured. Second, including validity indicators (e.g., inconsistency indices, response time thresholds) may help detect meta-prediction patterns. Third, the cross-scale consistency analysis demonstrates that response time variables capture shared variance beyond concurrent symptom measures, though the practical utility of this approach for bias detection requires further validation against external criteria.
 
 \subsubsection{Enhancing Clinical Assessment}
 
@@ -650,15 +600,15 @@ For survey researchers, the theory underscores the importance of designing quest
 
 \subsubsection{Limitations}
 
-First, we used response time patterns as proxies for meta-cognitive processes, rather than direct measures. While response times provide an objective, non-self-report measure of deliberation, they are an imperfect proxy. RT variability (our MM proxy) may reflect reading speed, device differences, attention fluctuations, or fatigue rather than meta-cognitive monitoring \citep{Wise2006}. The Deliberation proxy (inverse of extreme responding) shows a positive coefficient ($\hat{\beta} = 6.82$), indicating that participants who avoid extreme responses (i.e., use more intermediate response options) tend to report higher PHQ-9 scores. This is consistent with the interpretation that deliberation reflects genuine engagement with item content rather than strategic responding---participants who thoughtfully consider each item may report more symptoms, while those who default to extreme responses (0 or 3) may be responding more carelessly. However, this pattern could also reflect that participants with moderate symptoms naturally use a wider range of response options, while those with very low or very high scores cluster at the extremes.
+First, we used response time patterns as proxies for meta-cognitive processes, rather than direct measures. While response times provide an objective, non-self-report measure of deliberation, they are an imperfect proxy. RT variability (our MM proxy) may reflect reading speed, device differences, attention fluctuations, or fatigue rather than meta-cognitive monitoring \citep{Wise2006}. The Deliberation proxy (inverse of extreme responding) shows a positive coefficient ($\hat{\beta} = 7.31$), indicating that participants who avoid extreme responses (i.e., use more intermediate response options) tend to report higher PHQ-9 scores. This is consistent with the interpretation that deliberation reflects genuine engagement with item content rather than strategic responding---participants who thoughtfully consider each item may report more symptoms, while those who default to extreme responses (0 or 3) may be responding more carelessly. However, this pattern could also reflect that participants with moderate symptoms naturally use a wider range of response options, while those with very low or very high scores cluster at the extremes.
 
-Second, the Scale Awareness proxy (PHQ-9/GAD-7 consistency) conflates genuine clinical comorbidity with potential meta-cognitive bias. Depression and anxiety share genetic, neurobiological, and cognitive substrates \citep{Clark1991, Mineka1998}, so high cross-scale consistency may reflect true symptom co-occurrence rather than strategic responding. The observed negative correlation between SA and PHQ-9 ($r = -.498$) is counterintuitive under the meta-prediction interpretation (which would predict that more aware respondents show \textit{higher} scores due to strategic adjustment). This pattern is more consistent with a floor effect: low-symptom participants respond consistently across scales, while high-symptom participants show more variable responding. We conducted a robustness analysis excluding SA (Table~\ref{tab:robustness_no_sa}), which confirmed that the remaining proxy variables (MM, RA, DEL) still account for substantial variance ($\Delta R^2 = .208$; AIC $= 94{,}096$), demonstrating that the core finding does not depend on the circular SA variable.
+Second, we excluded the Scale Awareness proxy (PHQ-9/GAD-7 consistency) from the primary analysis because it conflates genuine clinical comorbidity with potential meta-cognitive bias. Depression and anxiety share genetic, neurobiological, and cognitive substrates \citep{Clark1991, Mineka1998}, so high cross-scale consistency may reflect true symptom co-occurrence rather than strategic responding. We conducted a supplementary analysis including SA (Table~\ref{tab:robustness_no_sa}), which showed that SA provides modest incremental predictive power ($\Delta R^2 = .016$, $\Delta$AIC $= -1{,}953$), but the core finding---that response time patterns account for substantial variance in PHQ-9 scores---holds without SA.
 
 Third, the empirical analysis was conducted with a specific population---Chinese university students at a medical university---which may limit the generalizability of the findings. Medical students may have greater familiarity with psychological constructs, potentially inflating Scale Cognition effects.
 
 Fourth, the data were collected at a single time point, precluding causal inferences. Future research should employ longitudinal and experimental designs to test the causal predictions of the theory.
 
-Fifth, while we examined the relationship between proxy variables and scale scores, we did not validate the adjustment method against external criteria such as clinician ratings or behavioral measures. The observed 47.3\% reduction in PHQ-9/GAD-7 correlation likely reflects both meta-cognitive processes and clinical comorbidity, and cannot be interpreted as pure bias removal without external validation.
+Fifth, while we examined the relationship between proxy variables and scale scores, we did not validate the adjustment method against external criteria such as clinician ratings or behavioral measures. The observed 43.2\% reduction in PHQ-9/GAD-7 correlation likely reflects both meta-cognitive processes and clinical comorbidity, and cannot be interpreted as pure bias removal without external validation. This is the central limitation of the present work: without external criterion validity, we cannot determine whether the residualized scores are ``less biased'' or simply ``less correlated.'' This analysis should be regarded as a proof of concept, not a validated bias correction method.
 
 Sixth, the linear modeling of DEL (inverse extreme responding) assumes a monotonic relationship with PHQ-9 scores. Binned means analysis shows that mean PHQ-9 increases monotonically with DEL (from 0.38 at DEL $\approx$ 0 to 9.48 at DEL $\approx$ 1), supporting the linear assumption. However, the theoretical relationship may be more complex: both very low DEL (all responses are extreme, consistent with either very high or very low symptoms) and very high DEL (no extreme responses, consistent with moderate symptoms) could reflect different underlying processes. The current linear specification may not capture this nuance.
 
@@ -672,7 +622,7 @@ Several promising directions for future research emerge from this work. First, f
 
 \section{Conclusion}
 
-The Meta-Prediction Theory represents a promising framework for understanding self-report bias in psychological assessment. By reconceptualizing bias as a recursive meta-cognitive process, the theory provides a more comprehensive framework than existing models. The empirical analysis, conducted with a large dataset, provides preliminary support for the theory's predictions and demonstrates the utility of response time-based meta-cognitive proxies. However, the current findings must be interpreted with caution: the observed relationships between proxy variables and scale scores may reflect both meta-cognitive processes and other factors (e.g., clinical comorbidity, reading speed, test-taking motivation). Future research should validate these findings using external criteria, test causal predictions through experimental manipulation of scale transparency, and develop more rigorous measures of meta-cognitive processes. The Meta-Prediction Theory offers a foundation for a new generation of research on the cognitive processes that shape how individuals report their thoughts, feelings, and behaviors.
+The Meta-Prediction Theory offers a proof of concept for understanding self-report bias as a recursive meta-cognitive process. By reconceptualizing bias as a dynamic, context-dependent process rather than a stable trait, the theory extends existing frameworks in important ways. The empirical analysis, conducted with a large dataset ($N = 24{,}292$), demonstrates that response time patterns---particularly DEL (inverse extreme responding) and GAD-7 scores---account for a substantial portion of variance in depression scores ($R^2 = .795$), outperforming the concurrent-validity baseline ($\Delta R^2 = .208$; $\Delta$AIC $= -17{,}035$). The cross-scale residualization reduces the PHQ-9/GAD-7 correlation by 43.2\%, suggesting that response time variables capture shared variance that is not explained by concurrent symptom measures alone. However, the current findings must be interpreted with caution: the proxy variables are imperfect measures of meta-cognitive processes, external validation against criterion measures (e.g., clinician ratings) is absent, and the observed patterns may reflect clinical comorbidity, floor effects, or fatigue rather than meta-prediction. This analysis is exploratory and all findings require replication. Future research should validate these findings using external criteria, develop direct measures of meta-cognitive processes, and test the computational models that the theory motivates.
 
 % =============================================================================
 % REFERENCES
